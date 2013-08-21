@@ -6,6 +6,8 @@ ruby "1.9.3"
 gem 'rails', '4.0.0.rc2'
 
 gem 'bootstrap-sass'
+gem 'devise'
+gem 'simple_form'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
