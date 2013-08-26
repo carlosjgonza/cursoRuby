@@ -9,7 +9,5 @@ class Pin < ActiveRecord::Base
 
 	attr_accessible :user_id, :description, :image
 
-	attr_accessible :asset_file_name
-
 	belongs_to :user	
 end
