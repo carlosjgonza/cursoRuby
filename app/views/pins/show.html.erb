@@ -1,7 +1,16 @@
 <div class = "row span6 offset3 well">
+  
+
+  <p>
+  	<%= image_tag @pin.image %>
+  </p>
   <strong>Descripci&oacute;n:</strong>
+  <p>
   <%= @pin.description %>
-  .Creado por:<%= @pin.user.name %>
+  </p>
+  <p>
+  Creado por:<%= @pin.user.name %>
+  </p>
 </div>
 <div class = "row span9">
 <% if current_user == @pin.user %>

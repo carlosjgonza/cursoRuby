@@ -19,3 +19,7 @@ doc/
 .project
 .DS_Store
 .idea
+
+#Ignorando las imágenes cargadas de prueba
+
+/public/system
