@@ -8,6 +8,7 @@ gem 'rails', '4.0.0.rc2'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'simple_form'
+gem 'protected_attributes'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do

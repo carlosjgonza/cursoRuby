@@ -1,8 +1,11 @@
 <div class = "row span6 offset3 well">
   <strong>Descripci&oacute;n:</strong>
   <%= @pin.description %>
+  .Creado por:<%= @pin.user.name %>
 </div>
 <div class = "row span9">
-<%= link_to 'Editar', edit_pin_path(@pin) %> |
+<% if current_user == @pin.user %>
+<%= link_to 'Editar', edit_pin_path(@pin) %>
+<% end %> |
 <%= link_to 'Regresar', pins_path %>
 </div>
