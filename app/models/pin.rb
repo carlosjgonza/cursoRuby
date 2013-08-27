@@ -1,7 +1,8 @@
 class Pin < ActiveRecord::Base		
 
 	has_attached_file :image,
-	 default_url: "/public/missing/:category_name.png",
+	 url: "/system/:attachment/:id/:style/:basename.:extension",
+	 path: ":rails_root/public/system/:attachment/:id/:style/:basename.:extension",
 	 styles: { medium: "320x240>"} 
 
 	validates :description, presence: true
