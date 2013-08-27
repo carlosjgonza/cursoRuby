@@ -62,6 +62,11 @@ class PinsController < ApplicationController
     end
   end
 
+  def reprocess_photo
+    photo.assign(photo)
+    photo.save
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pin
