@@ -10,6 +10,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'protected_attributes'
 gem "paperclip", "~> 3.0"
+gem 'aws-sdk'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
