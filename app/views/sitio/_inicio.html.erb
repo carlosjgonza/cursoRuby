@@ -1,17 +1,7 @@
-<% if user_signed_in? %>
-
-
-<h2>Bienvenido de nuevo al sistema<h2>
-
-<% else %>
+<% unless user_signed_in? %>
 
 <div class="row">
-  <div class="span4">
-
-  	<h2>Barra de Navegaci&oacute;n<h2>
-
-  </div>
-  <div class="span8">
+  <div class="span9">
 
   		<div class="hero-unit">
 		  	<h1>Curso Ruby on Rails</h1>
