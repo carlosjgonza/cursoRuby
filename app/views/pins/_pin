@@ -1,9 +1,17 @@
-<tr>
-	<td><%= image_tag pin.image(:medium) %></td>
-    <td><%= pin.description %></td>
-    <td><%= link_to 'Mostrar', pin %></td>
+<div class = "box">
+<%= link_to (image_tag pin.image(:medium)), pin %>
+	<p class = "descripcion">
+		<%= pin.description %>
+	</p>
+	<p>	
+		<strong>
+			Creado por:<%= pin.user.name %>
+		</strong>
+	</p>
+	<p>
     <% if current_user == pin.user %>
-    <td><%= link_to 'Editar', edit_pin_path(pin) %></td>
-    <td><%= link_to 'Eliminar', pin, method: :delete, data: { confirm: '¿Está seguro que quiere eliminar?' } %></td>
+    <%= link_to 'Editar', edit_pin_path(pin) %>
+    <%= link_to 'Eliminar', pin, method: :delete, data: { confirm: '¿Está seguro que quiere eliminar?' } %>
     <% end %>
-</tr>
+	</p>
+</div>

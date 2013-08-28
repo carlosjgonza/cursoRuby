@@ -32,3 +32,33 @@ body{
 		color: $gray;
 	}
 }
+
+.box{
+
+	margin: 5px;
+	padding: 5px;
+	font-size: 11pt;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 10px #444;
+	width: 214px;
+
+}
+
+.box img{
+
+	display: block;
+	width: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+}
+
+.descripcion{
+
+	margin: 10px 0 5px;
+
+}
