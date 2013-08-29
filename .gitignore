@@ -23,3 +23,7 @@ doc/
 #Ignorando las imágenes cargadas de prueba
 
 /public/system
+
+#Ignorando Imágenes de Prueba
+
+/simplesRecursos
