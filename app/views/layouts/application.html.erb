@@ -16,11 +16,13 @@
 			<%= content_tag(:div, msg, class: "alert alert-#(name)")%>
 		<% end %>
   
-		<%= yield %>
-
-		<%=render "sitio/footer"%>
+		<%= yield %>		
 
 	</div>
+
+	<p>
+		<%=render "sitio/footer"%>
+	</p>
 
 </body>
 </html>
