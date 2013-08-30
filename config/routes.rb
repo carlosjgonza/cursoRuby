@@ -8,6 +8,8 @@ CursoRuby::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'pins#index'
 
+  get 'users/:id' => 'users#show', as: :user
+
   get 'acerca' => 'sitio#acerca'
 
   # Example of regular route:

@@ -1,0 +1,37 @@
+
+pins.js.coffee (Al principio):
+
+
+$(window).scroll ->
+  url = $('.pagination .next_page a').attr('href')
+  if url && $(window).scrollTop() > $(document).height() - $(window).height() - 50
+  	$('.pagination').text("Agregando más recursos...")
+  	$.getScript(url)
+  $(window).scroll()
+
+
+Crear index.js.erb en views/pins:
+
+$boxes = $('<%= j render(@pins) %>')
+
+$('#pins').append( $boxes ).imagesLoaded(function(){
+	$('#pins').masonry('reload');
+});
+
+<% if @pins.next_page %>
+
+	$('.pagination').replaceWith('<%= j will_paginate(@pins) %>');
+<% else %>
+	$('.pagination').remove();
+<% end %>
+
+
+En el controlador de pins:
+
+En def index:
+
+respond_to do |format|
+	format.html #index.html.erb
+	format.json { render json: @pins }
+	format.js
+end

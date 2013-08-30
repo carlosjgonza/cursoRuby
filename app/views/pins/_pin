@@ -5,7 +5,7 @@
 	</p>
 	<p>	
 		<strong>
-			Creado por:<%= pin.user.name %>
+			Creado por:<%= link_to pin.user.name, pin.user %>
 		</strong>
 	</p>
 	<p>
